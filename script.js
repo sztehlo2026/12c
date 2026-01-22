@@ -1,80 +1,129 @@
-function togglePopUp(){
-  document.getElementById("popup-1").classList.toggle("active");
+@font-face {
+    font-family: Motiva-thin;
+    src: url(font/MotivaSansMedium.woff.ttf);
 }
 
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
+@font-face {
+    font-family: Motiva-bold;
+    src: url(font/MotivaSansBold.woff.ttf);
 }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+body {
+    margin: 0;
+    font-family: Motiva-thin;
+    font-size:x-large;
+    background-color: #1b2838;
+    color: #c7d5e0;
+}
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-} 
+/* Felső sáv */
+.topbar {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #171a21;
+}
 
-/* Menü aktív állapot */
-document.querySelectorAll('.menu-item').forEach(item => {
-    item.addEventListener('click', function () {
-        document.querySelectorAll('.menu-item').forEach(i => i.classList.remove('active'));
-        this.classList.add('active');
-    });
-});
+.menu {
+    display: flex;
+    gap: 25px;
+}
 
-/* Menü aktív állapot */
-document.querySelectorAll('.menu-item').forEach(item => {
-    item.addEventListener('click', function () {
-        document.querySelectorAll('.menu-item').forEach(i => i.classList.remove('active'));
-        this.classList.add('active');
-    });
-});
+.menu a {
+    text-decoration: none;
+    color: #c7d5e0;
+    font-weight: 6000;
+    cursor: pointer;
+}
 
-/* JÁTÉK gomb */
-document.getElementById('playBtn').addEventListener('click', () => {
-    document.getElementById('message').textContent =
-        'A tartalom a te régiódban nem elérhető';
-});
+.menu a.active {
+    color: #1a9fff;
+    border-bottom: 2px solid #1a9fff;
+    padding-bottom: 4px;
+}
+
+/* Kép */
+.banner img {
+    width: 100%;
+    display: block;
+}
+
+/* Alsó sáv */
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.play-btn {
+    background-color: #5c7e10;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.message {
+    margin-top: 15px;
+    color: #ff6b6b;
+    font-size: 14px;
+}
 
 /* Szív ikon */
-const heart = document.getElementById('heart');
-heart.addEventListener('click', () => {
-    heart.classList.toggle('inactive');
-});
+.heart {
+    font-size: 22px;
+    cursor: pointer;
+    color: #1a9fff;
+    user-select: none;
+}
 
-  const video = document.querySelector('.live-photo');
+    .heart.inactive {
+    color: #7f8c8d;
+}
 
-video.addEventListener('mouseenter', () => {
-    video.play();
-});
+/*LIVE PHOTO*/
 
-video.addEventListener('mouseleave', () => {
-    video.pause();
-    video.currentTime = 0;
-});
+.live-photo {
+    width: 4535.43px;
+    height: 1108.894px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 
-video.addEventListener('mouseleave', () => {
-video.pause();
+.live-photo:hover {
+    transform: scale(1.03);
+}
 
-const rewind = setInterval(() => {
-    if (video.currentTime <= 0.1) {
-    video.currentTime = 0;
-    clearInterval(rewind);
-    } else {
-    video.currentTime -= 0.05;
-    }
-}, 16);
-});
+.jatek {
+    position: absolute;
+    top: 555px;
+    left: 20px;
+    width:250px;
+}
 
-video.addEventListener('touchstart', () => {
-video.play();
-});
+.tanc {
+    position: absolute;
+    left: 30%;
+    width: 40%;
+    top: 10%;
+}
+
+.kozosseg-text {
+    width: 100%;
+    text-align: center;
+    margin-top: 475px;
+}
+
+
+ /* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.8;}
