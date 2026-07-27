@@ -1,0 +1,489 @@
+@font-face {
+    font-family: Motiva-thin;
+    src: url(font/MotivaSansMedium.woff.ttf);
+}
+
+@font-face {
+    font-family: Motiva-bold;
+    src: url(font/MotivaSansBold.woff.ttf);
+}
+
+.diak{
+    text-align: center;
+    font-size: large;
+    margin: 0;
+    font-family: Motiva-thin;
+}
+
+
+html, body {
+    overflow-x: hidden;
+}
+
+body{
+    color: white;
+    margin: 0px;
+    background:
+    radial-gradient(
+      ellipse 120vmax 80vmax at 50% 10%,
+      rgba(24, 66, 82, 0.8) 0%,
+      rgba(27, 43, 56, 0.9) 35%,
+      rgba(23, 26, 33, 1) 70%
+    ),
+
+    linear-gradient(
+    180deg,
+    #1b2838 0%,
+    #171a21 100% 
+    );
+
+    
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+
+
+
+
+
+
+
+/*Fejléc eleje*/
+
+.fejlec {
+    /*border: solid 3px rgb(255, 0, 0);*/
+    border-bottom: slategray;
+
+    position: relative;
+    display: block;
+    background-color: #171a21;
+    
+}
+
+.menu-container{
+    /*border: dotted 3px rgb(159, 255, 156);*/
+    justify-content: center;
+    color: hsl(206, 29%, 87%);
+    font-weight: 6000;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.menu-item{
+    /*border: solid 3px white; */
+
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-family: Motiva-thin;
+    font-size: x-large;
+    position: relative;
+    display: inline-block;
+    height: 40px; 
+    margin-left: 0.5rem;    
+}
+
+.menu-item:hover{
+    color: white;
+}
+
+.menu-item-active{
+    /*border: solid 3px white;*/
+    
+    color: #1a9fff;
+    border-bottom: 0.3rem solid #1a9fff;
+
+    cursor: pointer;
+    font-family: Motiva-thin;
+    font-size: x-large;
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    margin-left: 1rem;
+}
+
+/*Fejléc vége*/
+
+/*Borítókép*/
+.boritokep {
+    /*border: solid 3px white;*/  
+    overflow: hidden;
+}
+
+.boritokep img{ /*img tipusú child beállításai*/
+    width: 100%;
+    height: auto;       
+    display: block;
+}
+/*Borítókép vége*/
+
+/*Steam wrap*/
+
+.steam-wrap {
+    /*border: solid 3px rgb(0, 251, 255);*/
+    display: flex;
+    flex-wrap: wrap;
+    
+    background: linear-gradient(
+      to bottom,
+      rgba(58, 62, 73, 0.9) 0%,
+      rgba(46, 52, 65, 0.9) 20%,
+      rgba(23, 26, 33, 0.9) 80%,
+      rgba(23, 26, 33, 0.9) 100%
+    );
+}
+
+/*Steam wrap vége*/
+
+/*Ikonok és játék gomb*/
+.ikonsav {
+    /*border: solid 3px white;*/
+    position: relative;
+    display: inline-block;
+    
+    width: 70%;
+    height: 40%;  
+
+    margin: auto;/*vagy margin-left: 10px;*/
+    margin-top: 2%;
+}
+
+.jatek-gomb {
+    /*border: solid 3px white;*/
+    display: inline-block;
+    position: relative;
+  
+    width: 30%;
+    height: 20%;
+
+    margin: 3%;
+    padding-left: 0.8rem;
+    padding-top: 0.2rem;
+
+    cursor: pointer;
+}
+
+.jatek-gomb:hover {
+    filter: hue-rotate(20deg);
+}
+
+/*Ikonok és játék gomb vége*/
+
+
+/*Containerek*/
+
+.container-row {
+    /*border: dotted 3px white;*/
+
+    padding-right: 3%;
+    padding-left: 3%;
+    font-family: Motiva-thin;
+    font-weight: 100;
+    font-size: small;
+
+    
+    
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.container-row-centered {
+    /*border: dotted 3px rgb(251, 255, 0);*/
+
+    font-family: Motiva-thin;
+    font-weight: 100;
+    font-size: small;
+
+    
+    
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/*Containerek vége*/
+
+
+
+/*Képkeretek*/
+
+.tablofoto{
+    
+    /*border: solid 3px rgb(234, 255, 0);*/
+    cursor: pointer;
+    display: inline-block;
+    margin: 0.5rem;
+    
+    
+    border-radius: 10px;
+
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.tablofoto img{
+    touch-action: none;
+    width: 10rem;
+    border-radius: 10px;
+}
+
+
+
+
+
+.picture-frame-3d {
+    width: 70%;
+    /*border: solid 3px rgb(255, 69, 69);*/
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    
+    
+    border-radius: 10px;
+
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.picture-frame-3d:hover {
+    
+    transform: rotateX(15deg) scale(1.05);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.3);
+}
+
+.picture-frame-3d img{ /*img tipusú child beállításai*/
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+
+
+
+
+
+.picture-frame { /*A kép parentje*/
+    /*border: solid 3px rgb(255, 69, 240);*/
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin: 1rem;
+    
+    
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.picture-frame:hover {
+    
+    transform:  scale(1.05);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.3);
+}
+
+.picture-frame img{ /*img tipusú child beállításai*/
+    width: 17rem;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+/*Képkeretek vége*/
+
+
+.domain-3d{ /*3d effektekhez egy domain*/
+    /*border: dotted 3px rgb(91, 255, 69);*/
+    text-align: center;
+    display: inline-block;
+    perspective: 500px;/*Azért kell, hogy lehessen ebben a containerben 3d element*/
+}
+
+.domain-3d-tablo{ /*3d effektekhez egy domain*/
+    /*border: dotted 3px rgb(255, 69, 196);*/
+    width: 11.5rem;
+    height: 19rem;
+
+    display: inline-block;
+    perspective: 500px;/*Azért kell, hogy lehessen ebben a containerben 3d element*/
+}
+    
+
+
+.linebreak {
+    position: relative;
+    width: 90%;
+    height: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px rgba(128, 128, 128, 0.461);
+    border-radius: 1000px;
+}
+
+
+
+
+
+
+
+
+
+
+a {
+    text-decoration: none;
+    color:  inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+
+
+/*Animált háttér---------------------------------------------*/
+.bio-bg {
+    display: flex;
+    flex-wrap: wrap;
+    /*border: orange solid 1px;*/
+
+    width: 85%;
+    margin-top: 5%;
+    padding-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: linear-gradient(
+        135deg,
+        #0b1a24 0%,
+        #1b671b9e 35%,
+        #20922d 60%,
+        #156c1f96 80%,
+        #0b1a24 100%
+    );
+    background-size: 400% 400%;
+
+    animation: gradientMove 15s ease infinite;
+
+    border-radius: 1rem;
+   
+}
+
+.bio-bg .domain-3d{
+    margin: auto;
+}
+
+
+
+
+
+.info-bg {
+    display: flex;
+    flex-wrap: wrap;
+    /*border: orange solid 1px;*/
+
+    width: 85%;
+    margin-top: 5%;
+    padding-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: linear-gradient(
+        135deg,
+        #0b1a24 0%,
+        #1b4b67 35%,
+        #348790 60%,
+        #156c6b 80%,
+        #0b1a24 100%
+    );
+    background-size: 400% 400%;
+
+    animation: gradientMove 15s ease infinite;
+
+    border-radius: 1rem;
+    
+}
+
+.info-bg .domain-3d{ /*child domain 3dre vonatkozik*/
+    margin: auto;
+}
+
+
+
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+/*Animált háttér vége----------------------------------------*/
+
+/* CSS */
+#rotate-notice {
+  font-family: sans-serif;
+  font-size:xx-large    ;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Show only when the device is in portrait orientation */
+@media (orientation: portrait) {
+  #rotate-notice {
+    display: flex;
+  }
+}
