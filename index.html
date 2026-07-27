@@ -1,90 +1,98 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-<meta charset="UTF-8">
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    background: black;
-    color: #00ff00;
-    font-family: monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #text {
-    white-space: pre;
-    text-align: center;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sztehlo 12.C 2022-2026</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="text"></div>
+<!-- HTML -->
+<div id="rotate-notice">
+  <div class="rotate-content">
+    <p>Forgasd el a készüléket!</p>
+  </div>
+</div>
 
-<script>
-const fullText = `
- .d8888b.          888            888      888                d888    .d8888b.       .d8888b.  
-d88P  Y88b         888            888      888               d8888   d88P  Y88b     d88P  Y88b 
-Y88b.              888            888      888                 888          888     888    888 
- "Y888b.  88888888 888888 .d88b.  88888b.  888  .d88b.         888        .d88P     888        
-    "Y88b.   d88P  888   d8P  Y8b 888 "88b 888 d88""88b        888    .od888P"      888        
-      "888  d88P   888   88888888 888  888 888 888  888        888   d88P"          888    888 
-Y88b  d88P d88P    Y88b. Y8b.     888  888 888 Y88..88P        888   888"       d8b Y88b  d88P 
- "Y8888P" 88888888  "Y888 "Y8888  888  888 888  "Y88P"       8888888 888888888  Y8P  "Y8888P"  
 
+<!--Fejléc-->    
+<div class="fejlec">
+    <div class="menu-container">
+
+        <div class="menu-item">
+            <a href="galeria.html">Közösség</a>
+        </div>
+        
+      
+        <div class="menu-item-active">
+            Média
+        </div>
+
+
+
+    </div>
+</div>
+<!--Fejléc vége-->
+
+<!-- szürke törésvonal linebreak class-al-->
+    <div class="linebreak"></div>
 
  
-8888888888       888                                          888    888                                    
-888              888                                          888    888                                    
-888              888                                          888    888                                    
-8888888  .d88b.  888 888  888  8888b.  88888b.d88b.   8888b.  888888 88888b.   8888b.  88888b.              
-888     d88""88b 888 888  888     "88b 888 "888 "88b     "88b 888    888 "88b     "88b 888 "88b             
-888     888  888 888 888  888 .d888888 888  888  888 .d888888 888    888  888 .d888888 888  888             
-888     Y88..88P 888 Y88b 888 888  888 888  888  888 888  888 Y88b.  888 d88P 888  888 888  888 d8b d8b d8b 
-888      "Y88P"  888  "Y88888 "Y888888 888  888  888 "Y888888  "Y888 88888P"  "Y888888 888  888 Y8P Y8P Y8P 
-                          888                                                                               
-                     Y8b d88P                                                                               
-                      "Y88P"                                                                                
-`;
+    <div class="container-row-centered">
+        <h1>Osztálytáncunk</h1>
+    </div>
 
-const lines = fullText.split("\n");
-const maxLength = Math.max(...lines.map(line => line.length));
 
-let col = 0;
-let deleting = false;
+    <div class="linebreak"></div>
 
-function render() {
-  const el = document.getElementById("text");
+<!--osztálytánc-->
+    <div class="container-row-centered">
+        
+        <div class="domain-3d">
+        
+            <div class="picture-frame-3d">
+                <a href="https://youtu.be/yBHKEIP3WoE">
+                <img src="media/osztalytanc.png" alt="">
+                </a>
+            </div>
+        
+        </div>
+        
+    </div>
+<!--osztálytánc-->
 
-  let output = lines.map(line => {
-    return line.substring(0, col);
-  }).join("\n");
 
-  el.textContent = output;
+    <div class="linebreak"></div>
 
-  if (!deleting) {
-    col++;
-    if (col > maxLength) {
-      deleting = true;
-      setTimeout(render, 2000);
-      return;
-    }
-  } else {
-    col--;
-    if (col < 0) {
-      deleting = false;
-      col = 0;
-    }
-  }
+    <div class="container-row-centered">
+        <h1>Évfolyamkeringő</h1>
+    </div>
 
-  setTimeout(render, deleting ? 20 : 40);
-}
+    
+    <div class="linebreak"></div>
 
-render();
-</script>
+
+<!--osztályvideó-->
+    <div class="container-row-centered">
+
+        <div class="domain-3d">
+            <div class="picture-frame-3d">
+                <a href="https://youtu.be/173jjDeJ61c">
+                <img src="media/keringo.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+<!--osztályvideó-->
+
+
+</div>
+
+
+
+
+
 
 </body>
 </html>
